@@ -19,9 +19,22 @@
         <form>
             <label for="InputCuadrado">Escribe cuanto mide cada lado de tu cuadrado:</label>
             <input id="InputCuadrado" type="number"/>
+
+            <label for="InputUnidadCuadrado">Escribe la unidad de medida.</label>
+            <select id="InputUnidadCuadrado">                
+                <option value="mm">mm</option>
+                <option value="cm">cm</option>
+                <option value="dm">dm</option>
+                <option value="m">m</option>
+                <option value="Dm">Dm</option>
+                <option value="Hm">Hm</option>
+                <option value="Km">Km</option>                
+            </select>
+
             <button type="button" onclick="calcularPerimetroCuadrado()" >Calcula el Perimetro</button>
             <button type="button" onclick="calcularAreaCuadrado()" >Calcula el Area</button>
-            <p id="."></p>
+            <button type="reset">Limpiar</button>
+            <p id="result"></p>
         </form>
     </section>
 
@@ -38,9 +51,21 @@
             <label for="Base">Lado C:</label>
             <input id="Base" type="number" />
 
+            <label for="InputUnidadTriangulo">Escribe la unidad de medida.</label>
+            <select id="InputUnidadTriangulo">                
+                <option value="mm">mm</option>
+                <option value="cm">cm</option>
+                <option value="dm">dm</option>
+                <option value="m">m</option>
+                <option value="Dm">Dm</option>
+                <option value="Hm">Hm</option>
+                <option value="Km">Km</option>               
+            </select>
+
             <button type="button" onclick="calcularPerimetroTriangulo()" >Calcula el Perimetro</button>
             <button type="button" onclick="calcularAreaTriangulo()" >Calcula el Area</button>
             <button type="button" onclick="calcularAlturaTriangulo()" >Calcula la Altura</button>
+            <button type="reset">Limpiar</button>
             <p id="resultTriangulo"></p>
         </form>
     </section>
@@ -50,8 +75,21 @@
         <form>
             <label for="InputCirculo">Escribe cuanto mide el radio de tu circulo:</label>
             <input id="InputCirculo" type="number"/>
+
+            <label for="InputUnidadCirculo">Escribe la unidad de medida.</label>
+            <select id="InputUnidadCirculo">                
+                <option value="mm">mm</option>
+                <option value="cm">cm</option>
+                <option value="dm">dm</option>
+                <option value="m">m</option>
+                <option value="Dm">Dm</option>
+                <option value="Hm">Hm</option>
+                <option value="Km">Km</option>               
+            </select>
+
             <button type="button" onclick="calcularCircunferencia()" >Calcula la Circunferencia</button>
             <button type="button" onclick="calcularAreaCirculo()" >Calcula el Area</button>
+            <button type="reset">Limpiar</button>
             <p id="resultCirculo"></p>
         </form>
     </section>

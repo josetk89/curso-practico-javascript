@@ -5,94 +5,105 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Figuras Geometricas | Curso Practico de JS</title>
+    <link rel="stylesheet" href="./figuras.css">
 </head>
 <body>
-    <header>
+    <header class="header-container">
         <h1>
             Figuras Geometricas
         </h1>
         <p>Este es el primer taller del Curso Practico de JavaScript</p>
     </header>
+    <main class="main-container">
+        <section class="main-container__cuadrado">
+            <h2>Calcula el área y el perimetro de un Cuadrado</h2>  
+            <figure>
+                <img src="/images/cuadrado.png" alt="">
+            </figure>          
+            <form>
+                <label for="InputCuadrado">Escribe cuanto mide cada lado de tu cuadrado:</label>
+                <input id="InputCuadrado" type="number"/>
 
-    <section>
-        <h2>Calcula el area y el perimetro de un Cuadrado</h2>
-        <form>
-            <label for="InputCuadrado">Escribe cuanto mide cada lado de tu cuadrado:</label>
-            <input id="InputCuadrado" type="number"/>
+                <label for="InputUnidadCuadrado">Escribe la unidad de medida.</label>
+                <select id="InputUnidadCuadrado">                
+                    <option value="mm">mm</option>
+                    <option value="cm">cm</option>
+                    <option value="dm">dm</option>
+                    <option value="m">m</option>
+                    <option value="Dm">Dm</option>
+                    <option value="Hm">Hm</option>
+                    <option value="Km">Km</option>                
+                </select>
 
-            <label for="InputUnidadCuadrado">Escribe la unidad de medida.</label>
-            <select id="InputUnidadCuadrado">                
-                <option value="mm">mm</option>
-                <option value="cm">cm</option>
-                <option value="dm">dm</option>
-                <option value="m">m</option>
-                <option value="Dm">Dm</option>
-                <option value="Hm">Hm</option>
-                <option value="Km">Km</option>                
-            </select>
+                <button type="button" onclick="calcularPerimetroCuadrado()" >Calcula el Perimetro</button>
+                <button type="button" onclick="calcularAreaCuadrado()" >Calcula el Área</button>
+                <button type="reset">Limpiar</button>
+                <div>
+                    <p id="result"></p>
+                </div>                
+            </form>
+        </section>
 
-            <button type="button" onclick="calcularPerimetroCuadrado()" >Calcula el Perimetro</button>
-            <button type="button" onclick="calcularAreaCuadrado()" >Calcula el Area</button>
-            <button type="reset">Limpiar</button>
-            <p id="result"></p>
-        </form>
-    </section>
+        <section class="main-container__triangulo">
+            <h2>Calcula el area y el perimetro de un Triangulo</h2>
+            <form>
+                <p>Escribe cuanto miden los lados de tu triangulo</p>
+                <label for="Lado1">Lado A:</label>            
+                <input id="Lado1" type="number"/>
 
-    <section>
-        <h2>Calcula el area y el perimetro de un Triangulo</h2>
-        <form>
-            <p>Escribe cuanto miden los lados de tu triangulo</p>
-            <label for="Lado1">Lado A:</label>            
-            <input id="Lado1" type="number"/>
+                <label for="Lado2">Lado B:</label>
+                <input id="Lado2" type="number" />
+                
+                <label for="Base">Lado C:</label>
+                <input id="Base" type="number" />
 
-            <label for="Lado2">Lado B:</label>
-            <input id="Lado2" type="number" />
-            
-            <label for="Base">Lado C:</label>
-            <input id="Base" type="number" />
+                <label for="InputUnidadTriangulo">Escribe la unidad de medida.</label>
+                <select id="InputUnidadTriangulo">                
+                    <option value="mm">mm</option>
+                    <option value="cm">cm</option>
+                    <option value="dm">dm</option>
+                    <option value="m">m</option>
+                    <option value="Dm">Dm</option>
+                    <option value="Hm">Hm</option>
+                    <option value="Km">Km</option>               
+                </select>
 
-            <label for="InputUnidadTriangulo">Escribe la unidad de medida.</label>
-            <select id="InputUnidadTriangulo">                
-                <option value="mm">mm</option>
-                <option value="cm">cm</option>
-                <option value="dm">dm</option>
-                <option value="m">m</option>
-                <option value="Dm">Dm</option>
-                <option value="Hm">Hm</option>
-                <option value="Km">Km</option>               
-            </select>
+                <button type="button" onclick="calcularPerimetroTriangulo()" >Calcula el Perimetro</button>
+                <button type="button" onclick="calcularAreaTriangulo()" >Calcula el Area</button>
+                <button type="button" onclick="calcularAlturaTriangulo()" >Calcula la Altura</button>
+                <button type="reset">Limpiar</button>
+                <div>
+                    <p id="resultTriangulo"></p>
+                </div>                
+            </form>
+        </section>
 
-            <button type="button" onclick="calcularPerimetroTriangulo()" >Calcula el Perimetro</button>
-            <button type="button" onclick="calcularAreaTriangulo()" >Calcula el Area</button>
-            <button type="button" onclick="calcularAlturaTriangulo()" >Calcula la Altura</button>
-            <button type="reset">Limpiar</button>
-            <p id="resultTriangulo"></p>
-        </form>
-    </section>
+        <section class="main-container__circulo">
+            <h2>Calcula el area y el perimetro de un Circulo</h2>
+            <form>
+                <label for="InputCirculo">Escribe cuanto mide el radio de tu circulo:</label>
+                <input id="InputCirculo" type="number"/>
 
-    <section>
-        <h2>Calcula el area y el perimetro de un Circulo</h2>
-        <form>
-            <label for="InputCirculo">Escribe cuanto mide el radio de tu circulo:</label>
-            <input id="InputCirculo" type="number"/>
+                <label for="InputUnidadCirculo">Escribe la unidad de medida.</label>
+                <select id="InputUnidadCirculo">                
+                    <option value="mm">mm</option>
+                    <option value="cm">cm</option>
+                    <option value="dm">dm</option>
+                    <option value="m">m</option>
+                    <option value="Dm">Dm</option>
+                    <option value="Hm">Hm</option>
+                    <option value="Km">Km</option>               
+                </select>
 
-            <label for="InputUnidadCirculo">Escribe la unidad de medida.</label>
-            <select id="InputUnidadCirculo">                
-                <option value="mm">mm</option>
-                <option value="cm">cm</option>
-                <option value="dm">dm</option>
-                <option value="m">m</option>
-                <option value="Dm">Dm</option>
-                <option value="Hm">Hm</option>
-                <option value="Km">Km</option>               
-            </select>
-
-            <button type="button" onclick="calcularCircunferencia()" >Calcula la Circunferencia</button>
-            <button type="button" onclick="calcularAreaCirculo()" >Calcula el Area</button>
-            <button type="reset">Limpiar</button>
-            <p id="resultCirculo"></p>
-        </form>
-    </section>
+                <button type="button" onclick="calcularCircunferencia()" >Calcula la Circunferencia</button>
+                <button type="button" onclick="calcularAreaCirculo()" >Calcula el Area</button>
+                <button type="reset">Limpiar</button>
+                <div>
+                    <p id="resultCirculo"></p>
+                </div>                
+            </form>
+        </section>
+    </main>    
     
     <script src="./figuras.js"></script>
 </body>

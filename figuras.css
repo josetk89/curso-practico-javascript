@@ -66,7 +66,8 @@ body {
     font-size: var(--sm);
     gap: 0.5rem;
 }
-.main-container__cuadrado img {
+.main-container__cuadrado img, 
+.main-container__triangulo img {
     height: 10rem;
 }
 .main-container__cuadrado form,

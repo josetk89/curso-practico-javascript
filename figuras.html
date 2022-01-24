@@ -12,7 +12,7 @@
         <h1>
             Figuras Geometricas
         </h1>
-        <p>Este es el primer taller del Curso Practico de JavaScript</p>
+        <p>Este es el primer taller del Curso Práctico de JavaScript</p>
     </header>
     <main class="main-container">
         <section class="main-container__cuadrado">
@@ -45,7 +45,10 @@
         </section>
 
         <section class="main-container__triangulo">
-            <h2>Calcula el area y el perimetro de un Triangulo</h2>
+            <h2>Calcula el área y el perimetro de un Triangulo Equilatero o Isósceles</h2>
+            <figure>
+                <img src="/images/equilatero.png" alt="">
+            </figure> 
             <form>
                 <p>Escribe cuanto miden los lados de tu triangulo</p>
                 <label for="Lado1">Lado A:</label>            
@@ -69,7 +72,7 @@
                 </select>
 
                 <button type="button" onclick="calcularPerimetroTriangulo()" >Calcula el Perimetro</button>
-                <button type="button" onclick="calcularAreaTriangulo()" >Calcula el Area</button>
+                <button type="button" onclick="calcularAreaTriangulo()" >Calcula el Área</button>
                 <button type="button" onclick="calcularAlturaTriangulo()" >Calcula la Altura</button>
                 <button type="reset">Limpiar</button>
                 <div>
@@ -79,7 +82,7 @@
         </section>
 
         <section class="main-container__circulo">
-            <h2>Calcula el area y el perimetro de un Circulo</h2>
+            <h2>Calcula el área y el perimetro de un Circulo</h2>
             <form>
                 <label for="InputCirculo">Escribe cuanto mide el radio de tu circulo:</label>
                 <input id="InputCirculo" type="number"/>
@@ -96,7 +99,7 @@
                 </select>
 
                 <button type="button" onclick="calcularCircunferencia()" >Calcula la Circunferencia</button>
-                <button type="button" onclick="calcularAreaCirculo()" >Calcula el Area</button>
+                <button type="button" onclick="calcularAreaCirculo()" >Calcula el Área</button>
                 <button type="reset">Limpiar</button>
                 <div>
                     <p id="resultCirculo"></p>
